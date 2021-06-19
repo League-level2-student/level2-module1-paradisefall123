@@ -33,7 +33,7 @@ public class VisualArrayLists implements ActionListener {
 		}
 		// 6. Get a specific item from our list and print it out
 		list.get(0);
-		
+
 		// 7. Clear our list of all items
 		list.clear();
 		// 8. Print the size of our list again
