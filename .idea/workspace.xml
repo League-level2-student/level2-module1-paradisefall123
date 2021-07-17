@@ -20,7 +20,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.VisualArrayLists">
+  <component name="RunManager" selected="Application.GuestBook">
+    <configuration name="GuestBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_array_list_guestbook.GuestBook" />
+      <module name="Level2-Module1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_02_array_list_guestbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntroToArrayLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_00_intro_to_array_lists.IntroToArrayLists" />
       <module name="Level2-Module1" />
@@ -49,6 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GuestBook" />
         <item itemvalue="Application.VisualArrayLists" />
         <item itemvalue="Application.IntroToArrayLists" />
       </list>
