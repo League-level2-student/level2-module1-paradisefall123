@@ -1,9 +1,14 @@
 package _02_array_list_guestbook;
 
 import javax.swing.*;
-public class GuestBook {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+public class GuestBook implements ActionListener {
     public static void main(String[] args) {
-    setup();
+        GuestBook gg = new GuestBook();
+        gg.setup();
     }
     // Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names".
 
@@ -14,11 +19,15 @@ public class GuestBook {
     // Guest #2: Sandy Summers
     // Guest #3: Greg Ganders
     // Guest #4: Donny Doners
-    static void setup(){
-        JFrame frame = new JFrame();
-        JPanel panel = new JPanel();
-        JButton addbutton = new JButton();
-        JButton viewbutton = new JButton();
+    ArrayList<String> names = new ArrayList<String>();
+    JFrame frame = new JFrame();
+    JPanel panel = new JPanel();
+    JButton addbutton = new JButton();
+    JButton viewbutton = new JButton();
+
+    public void setup() {
+        addbutton.addActionListener(this);
+        viewbutton.addActionListener(this);
         frame.setVisible(true);
         frame.add(panel);
         panel.add(addbutton);
@@ -27,9 +36,23 @@ public class GuestBook {
         viewbutton.setText("View Names");
         frame.pack();
     }
-    JButton addname(JButton addbutton){
-        addbutton.addActionListener(this);
-        if()
+    public void displayAllNames(){
+        //iterate all the names in the Arraylist, then show it in Message dialogue
+        for(int i=0;i<names.size();i++){
+            String e=names.get(i);
+            JOptionPane.showMessageDialog(null, "Guest #"+i+": "+e);
+        }
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == addbutton) {
+            String moniker;
+            moniker = JOptionPane.showInputDialog("Please enter a name!");
+            names.add(moniker);
+        } else if (e.getSource() == viewbutton) {
+            displayAllNames();
+        }
+
     }
 }
 
