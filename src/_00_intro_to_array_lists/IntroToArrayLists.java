@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class IntroToArrayLists {
     public static void main(String[] args) {
+        int xyz=args.length;
         //1. Create an array list of Strings
         //   Don't forget to import the ArrayList (java.util) class
         ArrayList<String> foods = new ArrayList<String>();
